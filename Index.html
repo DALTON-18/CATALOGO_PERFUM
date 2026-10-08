@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Perfumes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1a2d; /* azul marino */
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .titulo {
+    font-family: 'Georgia', serif;
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px #0b1a2d, 0 0 15px #000000;
+    letter-spacing: 3px;
+    animation: glow 3s ease-in-out infinite alternate, fadeInDown 1.5s ease;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 2px 2px 8px #0b1a2d, 0 0 15px #000000; }
+    to { text-shadow: 2px 2px 15px #1e3a5f, 0 0 25px #ffffff; }
+  }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 2em;
+      letter-spacing: 2px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .perfume {
+      background-color: #ffffff;
+      color: #000000;
+      border-radius: 10px;
+      width: 250px;
+      margin: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .perfume:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    }
+
+    .perfume img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .reseña {
+      font-size: 0.9em;
+      color: #0b1a2d;
+      margin: 10px 0;
+    }
+
+    .precio {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #000000;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="titulo"> Catálogo de Perfumes </h1>
+  </header>
+
+  <section class="catalogo">
+    <div class="perfume">
+      <img src="SAUVAGE Dior .jpg" alt="Perfume 1">
+      <div class="info">
+        <h3>Sauvage Eau de Parfum Dior 100ml</h3>
+        <p class="reseña">Un aroma sofisticado con notas frescas y duraderas.</p>
+        <p class="precio">$2,400 MXN</p>
+      </div>
+    </div>
+
+    <div class="perfume">
+      <img src="imagen2.jpg" alt="Perfume 2">
+      <div class="info">
+        <h3>Perfume Nocturno</h3>
+        <p class="reseña">Ideal para ocasiones especiales, con un toque misterioso.</p>
+        <p class="precio">$1,500 MXN</p>
+      </div>
+    </div>
+
+    <!-- Puedes duplicar este bloque para más perfumes -->
+  </section>
+</body>
+</html>
